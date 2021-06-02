@@ -1,0 +1,111 @@
+body {
+	background-color: #fafafa;
+}
+
+/* Login Styles */
+
+#login-wrapper {
+	min-height: calc( 100vh - 20px );
+}
+
+/* Selects */
+
+select {
+	background: #fff;
+	border: 1px solid rgba( 0, 0, 0, 0.2 );
+	display: inline-block;
+	height: 36px;
+	margin: 0 1em;
+	max-width: 250px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* Side Actions */
+
+.side-actions {
+	display: flex;
+}
+
+.flex-helper {
+	flex: 1;
+}
+
+.side-actions form {
+	flex: 1;
+}
+
+/* Site Content */
+
+#site-content {
+	margin-top: 3rem;
+}
+
+/* Forms and Inputs */
+
+.input-field input {
+	border-bottom: 1px solid #fff !important;
+	box-shadow: 0 1px 0 0 #fff !important;
+}
+
+.input-field label {
+	color: #fff;
+}
+
+.input-field input:focus + label {
+	color: #ffa000 !important;
+}
+
+.input-field input:focus {
+	border-bottom: 1px solid #ffa000 !important;
+	box-shadow: 0 1px 0 0 #ffa000 !important;
+}
+
+/* Dark Inputs */
+
+.input-field.dark-input input {
+	border-bottom: 1px solid #607d8b !important;
+	box-shadow: 0 1px 0 0 #607d8b !important;
+}
+
+.input-field.dark-input label {
+	color: #607d8b;
+}
+
+.input-field.dark-input input:focus {
+	border-bottom: 1px solid #ffa000 !important;
+	box-shadow: 0 1px 0 0 #ffa000 !important;
+}
+
+/* Inline Forms */
+
+.inline-form .input-field,
+.inline-form button {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.inline-form .input-field {
+	max-width: 300px;
+	width: 100%;
+}
+
+/* Table Actions */
+
+.action {
+	transition: 0.3s;
+}
+
+.action:hover {
+	color: #ffa000 !important;
+}
+
+/* clearfix */
+
+.clearFix:after {
+	content: '';
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
