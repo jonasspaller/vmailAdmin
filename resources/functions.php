@@ -667,10 +667,6 @@
 
 		}
 
-		// close db connection
-
-		$pdo = NULL;
-
 	}
 
 	// check if user is admin
