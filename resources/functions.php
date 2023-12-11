@@ -501,7 +501,7 @@
 
 					die(
 						'Error in functions.php - Function: delete_domain() - could not delete domain<br>' .
-						'<b>Info:</b> ' . $stmt->errorInfo()[2]
+						'<b>Info:</b> ' . $stmt_3->errorInfo()[2]
 					);
 
 				}
@@ -512,7 +512,7 @@
 
 				die(
 					'Error in functions.php - Function: delete_domain() - could not delete aliases of domain<br>' .
-					'<b>Info:</b> ' . $stmt->errorInfo()[2]
+					'<b>Info:</b> ' . $stmt_2->errorInfo()[2]
 				);
 
 			}
@@ -523,7 +523,7 @@
 
 			die(
 				'Error in functions.php - Function: delete_domain() - could not delete users of domain<br>' .
-				'<b>Info:</b> ' . $stmt->errorInfo()[2]
+				'<b>Info:</b> ' . $stmt_1->errorInfo()[2]
 			);
 
 		}
@@ -626,6 +626,12 @@
 		// check for domains table
 
 		$stmt = $pdo->prepare( "SELECT 1 FROM domains" );
+
+		try {
+			$stmt->execute();
+		} catch (Exception $ex){
+			return false;
+		}
 
 		if ( $stmt->execute() ) {
 
